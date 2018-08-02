@@ -1,23 +1,27 @@
-Follow the instructions to get asciiflow running locally.
+# Run asciiflow locally
 
-Compile the javascript:
+## Compile the javascript
 ```
 $ ./compile.sh
 ```
 
-If you get a permissions error:
+## If you get a permissions error
 ```
 $ chmod a+x closure-compiler.jar
 ```
 
-Run a simple web server:
+## Run in web server
+### python simple web server
 ```
-$python -m SimpleHTTPServer
+$ python -m SimpleHTTPServer
 ```
 
-Goto: http://localhost:8000/index.html
-
-Run in a docker
+### A docker with web server
 ```
-$ sudo docker run -d --rm --name asciiflow -v `realpath $PWD`:/webapp -p 8080:8080 panguolin/webapp
+$ sudo docker run -d --rm --name asciiflow -v `realpath $PWD`:/webapp -p 8000:8080 panguolin/webapp
+```
+
+# Goto web page
+```
+http://localhost:8000
 ```
