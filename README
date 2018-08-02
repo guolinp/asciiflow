@@ -1,15 +1,23 @@
 Follow the instructions to get asciiflow running locally.
 
 Compile the javascript:
-~/asciiflow2$ ./compile.sh
+```
+$ ./compile.sh
+```
 
 If you get a permissions error:
-~/asciiflow2$ chmod a+x closure-compiler.jar
+```
+$ chmod a+x closure-compiler.jar
+```
 
 Run a simple web server:
-~/asciiflow2$python -m SimpleHTTPServer
+```
+$python -m SimpleHTTPServer
+```
 
 Goto: http://localhost:8000/index.html
 
-When developing, use the Google JS linter, gjslint.
-
+Run in a docker
+```
+$ sudo docker run -d --rm --name asciiflow -v `realpath $PWD`:/webapp -p 8080:8080 panguolin/webapp
+```
